@@ -1,0 +1,12 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - aws ecr get-login-password --region eu-west-2 | docker login --username AWS --password-stdin 615196324256.dkr.ecr.eu-west-2.amazonaws.com
+  build:
+    commands:
+      - docker build -t app_01 docker
+  post_build:
+    commands:
+      - docker push 615196324256.dkr.ecr.eu-west-2.amazonaws.com/app_01:latest
