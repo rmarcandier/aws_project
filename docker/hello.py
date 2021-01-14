@@ -3,7 +3,7 @@ import falcon
 class HelloResource(object):
     def on_get(self, req, resp):
         resp.status = falcon.HTTP_200
-        resp.body = ("Hello, World!2")
+        resp.body = ("Hello, World!")
 
 class Page2Resource(object):
     def on_get(self, req, resp):
