@@ -10,3 +10,4 @@ phases:
   post_build:
     commands:
       - docker push 615196324256.dkr.ecr.eu-west-2.amazonaws.com/app_01:latest
+
